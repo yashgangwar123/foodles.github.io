@@ -1,5 +1,8 @@
 function orderplaced() {
-      alert("I LOVE YOU 💖")
+      alert("Order succesfully placed")
+      setTimeout(function(){
+          alert("Here is your order:  I LOVE YOU 💖🤗")
+      },2000)
   }
 
 
