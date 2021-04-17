@@ -1,0 +1,443 @@
+/* CSS reset  */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* CSS variables */
+/* :root {} */
+
+
+/* navigation bar  */
+#navbar 
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* position: relative; */
+    /* justify-content: center; */
+}
+#navbar::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+/* navigation bar- logo and image  */
+.logo
+{
+   /* border: 2px solid red; */
+   margin: 0px 20px; 
+}
+.logo img
+{
+   height: 50px; 
+   width: 50px;
+   margin: 3px 2px;
+}
+
+/* navigation bar-list styling */
+#navbar ul
+{
+    display: flex;
+}
+#navbar ul li
+{
+    list-style: none;
+    font: 2rem;
+}
+#navbar ul li a
+{
+    text-decoration: none;
+    display: block; /* to add padding ...default is inline */
+    padding: 10px 10px;
+    color: white;
+    /* font-size: 1rem; */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    margin: 0px 12px;
+    transition: all 0.1s ease-in;
+}
+#navbar ul li a:hover
+{
+    transform: scale(1.1);
+    background-color: red; 
+    /* font-weight: bold; */
+}
+
+/* button styling */
+.btn
+{
+    border-radius: 20px;
+    border: 2px solid #f3ca5a;
+    background-color:#f3ca5a;
+    /* transition: all 0.2s ease-in; */
+    margin-left: 600px;
+    height: 18px;
+    /* margin: 0px 15px; */
+    padding: 10px 20px;
+    text-decoration: none; 
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    transition: all 0.2s ease-in;
+}
+.btn:hover
+{
+    border: 2px solid #f3ca5a;
+    color:#f3ca5a;
+    /* transform: scale(1.1); */
+    background-color:transparent;
+    /* opacity: 0.5; */
+    /* transform: translateY(-5px); */
+    /* box-shadow: 0px 3px 5px 1px rgb(248, 39, 39); */
+}
+/* home section atyling */
+.home
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 250px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+/* .home::before
+{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: url('../img/back5.jpg') no-repeat center center/cover;
+    z-index: -4;
+    opacity: 0.8;
+} */
+.video
+{
+    position: absolute;
+    z-index: -3;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    object-fit: fill;
+}
+.home h1
+{
+    margin-top:0px;
+    text-align: center;
+    color: blanchedalmond;
+}
+.home h3
+{
+    color: blanchedalmond;
+    text-align: center;
+}
+.home p
+{
+    color: blanchedalmond;
+    text-align: center;
+}
+
+#btnorder
+{
+    outline:none;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    margin-top: 50px;
+    border: 3px solid red;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhai', cursive;
+    color:white;
+    background-color: red;
+    transition: all 0.2s ease-in;
+}
+#btnorder:hover
+{
+    background-color: transparent;
+    border: 3px solid red;
+    transform: scale(1.1);
+}
+hr
+{
+    width: 1300px;
+    height: 2px;
+    margin: 10px;
+    border-radius: 2px;
+    background-color: blanchedalmond;
+}
+/* utility classes */
+.h-one
+{
+    padding: 5px;
+    font-size: 3.5rem;
+    font-family: 'Baloo Bhai', cursive;
+}
+.h-two
+{
+    /* padding: 5px; */
+    font-size: 2.5rem;
+    font-family: 'Baloo Bhai', cursive;
+}
+.home p
+{
+    padding: 5px;
+    font-size: 1.5rem;
+}
+strong
+{
+    color: rgb(218, 43, 12);
+    /* font-size: 4rem; */
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+#foodles
+{
+    font-size: 4rem;
+}
+
+/* services section  */
+.services-container
+{
+    margin-top: 70px;
+    /* border: 2px solid red; */
+    background-color: rgb(250, 236, 218);
+    
+}
+.services
+{
+    display: flex;
+    /* border: 2px solid blue; */
+    align-items: center;
+    justify-content: center;
+}
+.box
+{
+    text-align: center;
+    /* border: 2px solid green; */
+    border-radius: 10px;
+    background-color: rgb(245, 218, 183);
+    margin: 20px 30px;
+    /* padding: 15px 15px; */
+}
+.imagezoom
+{
+    overflow: hidden; /* to zoom image inside border */
+}
+.imagezoom img
+{
+    height: 260px;
+    width: 448px;
+    display: block;
+    /* margin: auto; */
+    transition: all 0.4s ease-in-out;
+    /* position: relative; */
+    /* z-index: -10; */
+    
+}
+.imagezoom img:hover
+{
+    transform: scale(1.4) rotate(5deg);
+    /* transform: rotate(10deg); */
+    /* z-index: -10; */
+}
+.h-three
+{
+    text-align: center;
+    padding: 2px;
+    margin-top: 10px;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 3.2rem;
+}
+.h-four
+{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+.box p
+{
+   text-align: center; 
+   padding:  2px 20px;
+   margin: 10px;
+}
+
+/* clients section  */
+.clients-container
+{
+    height: 200px;
+}
+.clients-container::before
+{
+    content:'';
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    background: url('../img/back4.jpg') no-repeat center center/cover;
+    z-index: -20;
+    opacity: 0.8;
+
+}
+.clients
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients-box
+{
+    margin: 45px 30px;
+    /* border: 2px solid red; */
+}
+.clients-box img
+{
+    height: 122px;
+    width: 155px;
+    border-radius: 20px;
+    transition:all 0.2s ease-in-out ;
+}
+.clients-box img:hover
+{
+    /* border: 3px solid grey; */
+    transform: scale(0.8);
+}
+.h-five
+{
+    text-align: center;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 3.2rem;
+    color: black;
+    margin-top: 10px;
+}
+
+.contact-container
+{
+    /* border: 2px solid red; */
+    margin-top: 100px;
+}
+.contact-container::before
+{
+    content:'';
+    height: 76%;
+    width: 100%;
+    position: absolute;
+    background: url('../img/contact5.jpg') no-repeat center center/cover;
+    z-index: -10;
+    opacity: 0.8;
+}
+.contact-box
+{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-box input
+{
+    margin: 5px 30px;
+    padding: 10px 50px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid grey;
+}
+.contact-box textarea
+{
+    margin: 5px 0px;
+    padding: 10px 50px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid grey;
+}
+.h-six
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.socialmedia
+{
+    margin: 15px 400px;
+    padding-left: 168px ;
+    
+}
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    border-radius: 60%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .footer
+  {
+      font-size: 1.2rem;
+      margin: 10px 10px;
+      padding: 10px 450px;
+  }
